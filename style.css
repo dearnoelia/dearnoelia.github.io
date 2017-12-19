@@ -1,40 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Sumana');
 
 body {
-  max-width: 960px;
-  margin: 0 auto;
-  font-family: ,helvetica,sans-serif;
+  font-family: "Roboto", "Helvetica", sans-serif;
   font-size: 16px;
-  color: rgb(1, 1, 1,);
+  color: rgb(1, 1, 1);
   line-height: 1.5;
-  text-align: center;
-
+  background-image: url("background.jpg");
 }
 
-
-header{
-  font-size: 20px;
-  font-family: Sumana;
+#wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #ccc;
 }
 
-h1 {
-  width: 200px;
-  font-family: Roboto, helvetica;
-  border: 50px rgb(153,153,255);
-  border-style:groove;
-  margin-left: auto;
-  margin-right: auto;
-}
+.banner {
+  width: 100%;
+  display: block;
 
-main {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-gap: 6px;
-}
-
-li {
-  display: inline;
-  padding: 15px;
 }
 
 a {
@@ -53,68 +39,87 @@ a:active {
   color: #6600CC;
 }
 
-h2 {
-  font-family: serif;
-  color: rgb(1,1,1);
-  text-align:center;
-}
-
+h1,
+h2,
 h3 {
-  font-family: helvetica;
-  color: rgb(1,1,1);
+  font-family: "Sumana";
 }
 
-p {
-  text-align: center;
+nav ul {
+  list-style: none;
+  padding-left: 0;
 }
+
+nav li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+
+#index main {
+  grid-template-columns: 1fr 300px;
+}
+
+#index img {
+  border: 1px solid #ccc;
+}
+
+#contact-me section {
+  grid-column: 1 / -1;
+}
+
+/*
+#index section {
+  padding-left: 10px;
+  }*/
+
+
+/* index styles */
+
 
 #experience {
-  float: right;
-  border: 2px solid rgb(153,153,255);
-  padding: 10px 70px;
-  margin: 20px;
+  grid-row: 2 / span 2;
+  grid-column: 2;
 }
 
-#experience:hover {
-  background-color:#CCCCFF;
+#experience li {
+  margin-bottom: 40px;
 }
 
-#skills {
-  float: left;
-  border: 2px solid rgb(153,153,255);
-  padding: 10px 70px;
-  margin: 20px;
+
+/* contact page style */
+#social {
+grid-row: 1;
+grid-column: 1;
+margin-top: 15px;
+
 }
 
-#skills p {
-  display: list-item;
-  list-style-type:none;
-  line-height: 50;
-  text-align: center;
-  p
+#contact {
+  grid-row: 1;
+  grid-column: 2;
 }
 
-#skills:hover {
-  background-color:#CCCCFF;
+/* writing page style */
+
+
+
+/*portfolio page style*/
+
+#japan {
+  grid-row: 1;
+  grid-column: 1;
+
 }
 
-#education {
-  border: 2px solid rgb(153,153,255);
-  margin: 20px;
-  padding: 10px 70px;
-  text-align:center;
-}
+#china {
+  grid-row: 1;
+  grid-column: 2;
 
-#education:hover {
-  background-color:#CCCCFF;
-}
-
-#certifications {
-  border: 2px solid rgb(153,153,255);
-  margin: 20px;
-  padding: 10px 70px;
-}
-
-#certifications:hover {
-  background-color:#CCCCFF;
 }
